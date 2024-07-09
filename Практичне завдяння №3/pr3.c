@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-long long countNumbers(int p) {
+long long count(int p) {
     if (p == 0) return 0;
     if (p == 1) return 2; 
     if (p == 2) return 4; 
@@ -55,7 +55,7 @@ int main() {
         return 1;
     }
     
-    printf("Кількість чисел з %d розрядів: %lld\n", p, countNumbers(p));
+    printf("Кількість чисел з %d розрядів: %lld\n", p, count(p));
     
     return 0;
 }

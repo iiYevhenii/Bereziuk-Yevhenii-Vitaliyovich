@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <windows.h>
 
-int isEqualDivisor(int n, int m) {
+int number(int n, int m) {
     return (n / m == n % m);
 }
 
 
-int countEqualDivisors(int n) {
+int count(int n) {
     int count = 0;
     for (int m = 1; m < n; m++) {
-        if (isEqualDivisor(n, m)) {
+        if (number(n, m)) {
             count++;
         }
     }
@@ -29,7 +29,7 @@ int main() {
         return 1;
     }
 
-    int result = countEqualDivisors(n);
+    int result = count(n);
     printf("Кількість рівних дільників числа %d: %d\n", n, result);
 
     return 0;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-int countSequences(int n) {
+int count(int n) {
     if (n == 1) return 2; 
     if (n == 2) return 4; 
     if (n == 3) return 7; 
@@ -32,7 +32,7 @@ int main() {
         return 1;
     }
     
-    int result = countSequences(n);
+    int result = count(n);
     printf("Кількість шуканих послідовностей довжиною %d: %d\n", n, result);
     
     return 0;

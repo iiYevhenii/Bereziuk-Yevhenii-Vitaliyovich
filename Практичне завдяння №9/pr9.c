@@ -2,27 +2,27 @@
 #include <stdlib.h>
 #include <windows.h>
 
-int min_steps(int x, int y) {
+int min(int x, int y) {
 
     int distance = y - x;
-    int step_length = 1;
-    int total_steps = 0;
+    int length = 1;
+    int total = 0;
     
 
     while (distance > 0) {
 
-        distance -= step_length;
-        total_steps++;
+        distance -= length;
+        total++;
         
 
         if (distance > 0) {
-            distance -= step_length;
-            total_steps++;
-            step_length++;
+            distance -= length;
+            total++;
+            length++;
         }
     }
     
-    return total_steps;
+    return total;
 }
 
 int main() {
@@ -40,7 +40,7 @@ int main() {
     }
 
 
-    int result = min_steps(x, y);
+    int result = min(x, y);
 
  
     printf("Мінімальна кількість кроків від %d до %d: %d\n", x, y, result);

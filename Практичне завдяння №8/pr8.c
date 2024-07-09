@@ -14,7 +14,7 @@ unsigned long long factorial(int n) {
 }
 
 
-unsigned long long countAnagrams(char* word) {
+unsigned long long count(char* word) {
     int length = strlen(word);
     int counts[256] = {0}; 
     
@@ -45,7 +45,7 @@ int main() {
     printf("Введіть слово (не більше 14 букв): ");
     scanf("%s", word);
     
-    unsigned long long result = countAnagrams(word);
+    unsigned long long result = count(word);
     
     printf("Кількість можливих анаграм: %llu\n", result);
     
